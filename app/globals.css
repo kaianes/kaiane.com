@@ -1,0 +1,20 @@
+@import "tailwindcss";
+
+@theme {
+  /* Brand colors */
+  --color-deep-mind: #1B2A4A;
+  --color-insight-blue: #2E4A7D;
+  --color-bright-logic: #4C6FBF;
+  --color-live-circuit: #16C6C9;
+  --color-warm-spark: #E8B84B;
+  --color-soft-canvas: #F2EFE9;
+
+  /* Fonts */
+  --font-heading: var(--font-space-grotesk);
+  --font-body: var(--font-inter);
+  --font-mono: var(--font-jetbrains-mono);
+}
+
+body {
+  font-family: var(--font-body), system-ui, sans-serif;
+}
