@@ -6,7 +6,7 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="relative bg-deep-mind overflow-hidden h-[520px] md:h-[640px]"
+      className="relative bg-deep-mind overflow-hidden min-h-[calc(100svh)] md:h-[640px]"
     >
       {/* ShaderGradient background */}
       <div aria-hidden className="absolute inset-0 z-0 overflow-hidden" style={{ pointerEvents: "none" }}>
@@ -51,7 +51,7 @@ export default function Hero() {
 
 
       {/* Main content */}
-      <div className="relative z-10 px-6 md:px-20 pt-[100px] md:pt-[148px]">
+      <div className="relative z-10 px-6 md:px-20 pt-[130px] md:pt-[148px]">
         <p className="font-body text-[13px] md:text-[16px] text-soft-canvas/60 md:text-white/55">
           Hey there! My name is
         </p>

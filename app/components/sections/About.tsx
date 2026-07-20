@@ -4,7 +4,7 @@ function Photo() {
   return (
     <div className="relative w-[200px] md:w-[380px] aspect-[380/420] overflow-hidden rounded-sm">
       <Image
-        src="/images/kaiane.jpeg"
+        src={`${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/images/kaiane.jpeg`}
         alt="Kaiane"
         fill
         className="object-cover object-top"
