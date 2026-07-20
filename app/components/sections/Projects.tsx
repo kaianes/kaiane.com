@@ -385,7 +385,7 @@ export default function Projects() {
           aria-label="Previous slide"
           className="shrink-0 w-9 h-9 rounded-full border border-deep-mind/20 flex items-center justify-center text-deep-mind/50 hover:border-deep-mind/50 hover:text-deep-mind disabled:opacity-30 disabled:cursor-not-allowed transition-all"
         >
-          ←
+          &#x2190;
         </button>
 
         <div className="flex-1 overflow-hidden">
@@ -417,7 +417,7 @@ export default function Projects() {
           aria-label="Next slide"
           className="shrink-0 w-9 h-9 rounded-full border border-deep-mind/20 flex items-center justify-center text-deep-mind/50 hover:border-deep-mind/50 hover:text-deep-mind disabled:opacity-30 disabled:cursor-not-allowed transition-all"
         >
-          →
+          &#x2192;
         </button>
       </div>
 
@@ -436,6 +436,11 @@ export default function Projects() {
           </div>
         ))}
       </div>
+
+      {/* Mobile swipe hint */}
+      <p className="md:hidden mt-4 px-6 font-body text-[11px] text-deep-mind/40 text-center">
+        swipe to navigate through projects
+      </p>
 
       {/* Pagination — dots + counter */}
       <div className="mt-8 px-6 md:px-20 flex items-center gap-8">
