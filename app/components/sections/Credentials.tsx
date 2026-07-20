@@ -12,7 +12,7 @@ const leadership = [
 
 export default function Credentials() {
   return (
-    <section id="credentials" className="bg-white px-6 md:px-20 pt-[72px] pb-[80px]">
+    <section id="credentials" className="bg-white px-6 md:px-20 pt-14 md:pt-[72px] pb-[80px]">
       {/* Section header */}
       <div className="mb-[38px] w-full h-px bg-deep-mind/12" />
 

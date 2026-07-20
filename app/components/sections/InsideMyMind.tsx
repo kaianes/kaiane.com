@@ -19,7 +19,7 @@ function MindCard({
       href={href}
       target="_blank"
       rel="noopener noreferrer"
-      className="relative block bg-insight-blue rounded-lg p-6 md:p-8 overflow-hidden group transition-transform hover:-translate-y-1 duration-200"
+      className="relative block bg-[#0D1B3E] rounded-lg p-6 md:p-8 overflow-hidden group transition-transform hover:-translate-y-1 duration-200"
     >
       {/* Icon accent — top right */}
       <div className="absolute top-5 right-5" aria-hidden>
@@ -55,7 +55,7 @@ function MindCard({
 
 export default function InsideMyMind() {
   return (
-    <section id="inside-my-mind" className="bg-soft-canvas px-6 md:px-20 pt-[72px] pb-[80px]">
+    <section id="inside-my-mind" className="bg-soft-canvas px-6 md:px-20 pt-14 md:pt-[72px] pb-[80px]">
       {/* Section header */}
       <div className="mb-[38px] w-full h-px bg-deep-mind/12" />
 

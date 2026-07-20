@@ -2,7 +2,7 @@ import { Mail } from "lucide-react";
 
 export default function LetsTalk() {
   return (
-    <section id="lets-talk" className="bg-deep-mind px-6 md:px-20 pt-[72px] pb-[80px] min-h-[calc(100vh-56px)] md:min-h-[calc(100vh-72px)]">
+    <section id="lets-talk" className="bg-deep-mind px-6 md:px-20 pt-14 md:pt-[72px] pb-[80px] min-h-[calc(100vh-56px)] md:min-h-[calc(100vh-72px)]">
       <h2 className="font-heading font-bold text-[52px] md:text-[80px] leading-none text-soft-canvas">
         Let&apos;s Talk
       </h2>

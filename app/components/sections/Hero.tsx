@@ -50,7 +50,7 @@ export default function Hero() {
       <div
         aria-hidden
         className="absolute bottom-0 left-0 right-0 h-20 z-[1] pointer-events-none"
-        style={{ background: "linear-gradient(to bottom, transparent, #1B2A4A)" }}
+        style={{ background: "linear-gradient(to bottom, transparent, #0A1128)" }}
       />
 
     </section>

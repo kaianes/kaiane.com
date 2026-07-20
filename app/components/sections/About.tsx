@@ -2,7 +2,7 @@ import Image from "next/image";
 
 function Photo() {
   return (
-    <div className="relative w-full md:w-[380px] aspect-[380/420] overflow-hidden rounded-sm">
+    <div className="relative w-[200px] md:w-[380px] aspect-[380/420] overflow-hidden rounded-sm">
       <Image
         src="/images/kaiane.jpeg"
         alt="Kaiane"
@@ -16,7 +16,7 @@ function Photo() {
 
 export default function About() {
   return (
-    <section id="about" className="bg-soft-canvas px-6 md:px-20 pt-[72px] pb-[80px]">
+    <section id="about" className="bg-soft-canvas px-6 md:px-20 pt-14 md:pt-[72px] pb-[80px]">
       {/* Section header */}
       <div className="mb-[38px] w-full h-px bg-deep-mind/12" />
 
@@ -29,7 +29,7 @@ export default function About() {
           </h2>
 
           {/* Photo — mobile only, between heading and bio */}
-          <div className="md:hidden mt-8 mb-8">
+          <div className="md:hidden mt-8 mb-8 flex justify-center">
             <Photo />
           </div>
 

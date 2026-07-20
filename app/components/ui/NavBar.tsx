@@ -50,11 +50,13 @@ export default function NavBar() {
 
   const go = (section: SectionId) => {
     setOpen(false);
-    if (section === "hero") {
-      window.scrollTo({ top: 0, behavior: "smooth" });
-      return;
-    }
-    document.getElementById(section)?.scrollIntoView({ behavior: "smooth" });
+    setTimeout(() => {
+      if (section === "hero") {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+        return;
+      }
+      document.getElementById(section)?.scrollIntoView({ behavior: "smooth" });
+    }, 250);
   };
 
   return (

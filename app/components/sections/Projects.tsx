@@ -156,10 +156,10 @@ function chunk<T>(arr: T[], n: number): T[][] {
   return result;
 }
 
-const ACCENT_BORDER: Record<string, string> = {
-  "bg-live-circuit": "border-live-circuit",
-  "bg-warm-spark": "border-warm-spark",
-  "bg-bright-logic": "border-bright-logic",
+const ACCENT_BORDER_TOP: Record<string, string> = {
+  "bg-live-circuit": "border-t-live-circuit",
+  "bg-warm-spark": "border-t-warm-spark",
+  "bg-bright-logic": "border-t-bright-logic",
 };
 
 const slides = chunk(projects, 3);
@@ -201,7 +201,7 @@ function ProjectModal({
 
       {/* Modal */}
       <div
-        className={`relative z-10 bg-white rounded-2xl border-2 ${ACCENT_BORDER[accentClass] ?? "border-live-circuit"} w-full max-w-[680px] max-h-[85vh] overflow-y-auto transition-all duration-200 ${
+        className={`relative z-10 bg-white rounded-2xl border-2 border-deep-mind/15 ${ACCENT_BORDER_TOP[accentClass] ?? "border-t-live-circuit"} w-full max-w-[680px] max-h-[85vh] overflow-y-auto [scrollbar-width:none] [&::-webkit-scrollbar]:hidden transition-all duration-200 ${
           open ? "scale-100 opacity-100" : "scale-95 opacity-0"
         }`}
       >
@@ -368,7 +368,7 @@ export default function Projects() {
   const next = () => setCurrent((c) => Math.min(slides.length - 1, c + 1));
 
   return (
-    <section id="projects" className="bg-soft-canvas pt-[72px] pb-[80px]">
+    <section id="projects" className="bg-soft-canvas pt-14 md:pt-[72px] pb-[80px]">
       {/* Section header */}
       <div className="px-6 md:px-20">
         <div className="mb-[38px] w-full h-px bg-deep-mind/12" />
@@ -438,8 +438,8 @@ export default function Projects() {
       </div>
 
       {/* Pagination — dots + counter */}
-      <div className="mt-8 px-6 md:px-20 flex items-center justify-between md:justify-start md:gap-8">
-        <div className="flex gap-2">
+      <div className="mt-8 px-6 md:px-20 flex items-center gap-8">
+        <div className="hidden md:flex gap-2">
           {slides.map((_, i) => (
             <button
               key={i}
@@ -454,29 +454,9 @@ export default function Projects() {
           ))}
         </div>
 
-        <p className="font-body text-[11px] text-deep-mind/40">
+        <p className="hidden md:block font-body text-[11px] text-deep-mind/40">
           {TOTAL} projects · {slides.length} slides
         </p>
-
-        {/* Mobile arrows */}
-        <div className="md:hidden flex items-center gap-2">
-          <button
-            onClick={prev}
-            disabled={current === 0}
-            aria-label="Previous"
-            className="w-8 h-8 rounded-full border border-deep-mind/20 flex items-center justify-center text-[12px] text-deep-mind/50 disabled:opacity-30 disabled:cursor-not-allowed"
-          >
-            ←
-          </button>
-          <button
-            onClick={next}
-            disabled={current === slides.length - 1}
-            aria-label="Next"
-            className="w-8 h-8 rounded-full border border-deep-mind/20 flex items-center justify-center text-[12px] text-deep-mind/50 disabled:opacity-30 disabled:cursor-not-allowed"
-          >
-            →
-          </button>
-        </div>
       </div>
 
       {/* Project modal */}

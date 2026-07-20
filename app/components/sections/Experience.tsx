@@ -43,7 +43,7 @@ const entries: ExpEntry[] = [
 
 export default function Experience() {
   return (
-    <section id="experience" className="bg-deep-mind px-6 md:px-20 pt-[72px] pb-[80px]">
+    <section id="experience" className="bg-deep-mind px-6 md:px-20 pt-14 md:pt-[72px] pb-[80px]">
       {/* Section header */}
       <div className="mb-[38px] w-full h-px bg-live-circuit/20" />
 
