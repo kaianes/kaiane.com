@@ -368,7 +368,7 @@ export default function Projects() {
   const next = () => setCurrent((c) => Math.min(slides.length - 1, c + 1));
 
   return (
-    <section id="projects" className="bg-soft-canvas pt-14 md:pt-[72px] pb-[80px]">
+    <section id="projects" className="bg-soft-canvas pt-14 md:pt-[72px] pb-[80px] min-h-svh md:min-h-0">
       {/* Section header */}
       <div className="px-6 md:px-20">
         <div className="mb-[38px] w-full h-px bg-deep-mind/12" />
