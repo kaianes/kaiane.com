@@ -58,11 +58,12 @@ export default function Hero() {
         <h1 className="font-heading font-bold text-[52px] md:text-[88px] leading-none text-soft-canvas mt-0">
           Kaiane
         </h1>
-        <p className="font-body text-[13px] md:text-[18px] text-soft-canvas/70 md:text-white/60 mt-4 md:mt-2 whitespace-nowrap">
+        <p className="font-body text-[13px] md:text-[18px] text-soft-canvas/70 md:text-white/60 mt-4 md:mt-2 md:whitespace-nowrap">
           Software Engineering · Cloud Architecture · Artificial Intelligence
         </p>
         {/* Warm Spark accent line — 64px mobile, 96px desktop */}
         <div className="mt-4 md:mt-3 w-16 md:w-24 h-[3px] bg-warm-spark" />
+
 
         {/* Contact icons */}
         <div className="mt-5 flex items-center gap-5">
