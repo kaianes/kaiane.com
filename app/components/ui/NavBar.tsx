@@ -62,7 +62,7 @@ export default function NavBar() {
   return (
     <>
       <nav
-        className={`sticky top-0 z-50 w-full bg-deep-mind transition-shadow duration-200 ${
+        className={`fixed top-0 z-50 w-full bg-deep-mind/40 backdrop-blur-md transition-shadow duration-200 ${
           scrolled ? "shadow-[0_1px_0_rgba(22,198,201,0.12)]" : ""
         }`}
       >
@@ -71,6 +71,7 @@ export default function NavBar() {
           <button
             onClick={() => go("hero")}
             className="font-heading font-bold text-[18px] text-live-circuit tracking-wide leading-none"
+            style={{ WebkitTextStroke: "1.5px #0A1128", paintOrder: "stroke fill" }}
             aria-label="Kaiane — home"
           >
             K

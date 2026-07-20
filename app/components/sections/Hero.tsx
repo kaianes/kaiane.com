@@ -1,17 +1,56 @@
+"use client";
+
+import { ShaderGradient, ShaderGradientCanvas } from "@shadergradient/react";
+
 export default function Hero() {
   return (
     <section
       id="hero"
-      className="relative bg-deep-mind overflow-hidden h-[460px] md:h-[560px]"
+      className="relative bg-deep-mind overflow-hidden h-[520px] md:h-[640px]"
     >
+      {/* ShaderGradient background */}
+      <div aria-hidden className="absolute inset-0 z-0 overflow-hidden" style={{ pointerEvents: "none" }}>
+        <ShaderGradientCanvas style={{ position: "absolute", inset: 0, width: "100%", height: "100%" }} fov={45} pixelDensity={1} pointerEvents="none">
+          <ShaderGradient
+            animate="on"
+            smoothTime={0}
+            enableCameraUpdate={false}
+            brightness={1}
+            cAzimuthAngle={180}
+            cDistance={2.8}
+            cPolarAngle={80}
+            cameraZoom={9.1}
+            color1="#606080"
+            color2="#2E4A7D"
+            color3="#0A1128"
+            envPreset="lobby"
+            grain="on"
+            lightType="3d"
+            positionX={0}
+            positionY={0}
+            positionZ={0}
+            range="disabled"
+            rangeEnd={40}
+            rangeStart={0}
+            reflection={0.1}
+            rotationX={50}
+            rotationY={0}
+            rotationZ={-60}
+            shader="defaults"
+            type="waterPlane"
+            uAmplitude={0}
+            uDensity={1.5}
+            uFrequency={0}
+            uSpeed={0.3}
+            uStrength={1.5}
+            uTime={8}
+            wireframe={false}
+          />
+        </ShaderGradientCanvas>
+      </div>
 
-      {/* Live Circuit accent dot — mobile only */}
-      <div
-        aria-hidden
-        className="md:hidden absolute right-8 top-[60px] w-5 h-5 rounded-full bg-live-circuit/65 z-10"
-      />
 
-{/* Main content */}
+      {/* Main content */}
       <div className="relative z-10 px-6 md:px-20 pt-[100px] md:pt-[148px]">
         <p className="font-body text-[13px] md:text-[16px] text-soft-canvas/60 md:text-white/55">
           Hey there! My name is
@@ -46,7 +85,7 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* Gradient overlay at bottom — hides Unicorn Studio watermark */}
+      {/* Gradient overlay at bottom */}
       <div
         aria-hidden
         className="absolute bottom-0 left-0 right-0 h-20 z-[1] pointer-events-none"
